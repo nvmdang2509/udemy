@@ -1,0 +1,113 @@
+header{
+    @include styleText($color-black-light,$fs-1,$fw-normal)
+}
+.header__left {
+    display: flex;
+    align-items: center;
+    .navbar-brand{
+        flex-grow: 1;
+        img{
+            width: 110px;
+        }
+    }
+    .categories{
+        flex-grow: 1;
+    }
+
+    .form-search{
+        flex-grow: 10;
+        .form-control{
+            background-color: $color-gray-1;
+            border: none;
+            transition: none;
+            &:focus{
+                box-shadow: none;
+                background-color: $color-white-0;
+                border-top:1px solid $color-gray-3;
+                border-left:1px solid $color-gray-3;
+                border-bottom:1px solid $color-gray-3;
+            }
+            &:focus + .input-group-append{
+                .input-group-text{
+                    color: $color-red-0;
+                    background-color: $color-white-0;
+                    border-top:1px solid $color-gray-3;
+                    border-right:1px solid $color-gray-3;
+                    border-bottom:1px solid $color-gray-3;
+                }
+                &:hover {
+                    .input-group-text{
+                        color: $color-white-0;
+                        background-color: $color-red-0;
+                    }
+                }
+            }
+        }
+        .input-group-append{
+            .input-group-text{
+                background-color: $color-gray-1;
+                color: $color-red-0;
+                border: none;
+            }
+            &:hover {
+                .input-group-text{
+                    color: $color-white-0;
+                    background-color: $color-red-0;
+                }
+            }
+        }
+    }
+}
+
+.header__right{
+    .nav-link{
+        @include styleText($color-black-light,$fs-1,$fw-normal);
+        padding : $pd-1 pd-3;
+    }
+}
+
+
+.header__right{
+    .nav-item{
+        &:hover{
+            background-color: $color-gray-1;
+        }
+    }
+}
+
+.navbar-nav{
+    justify-content: space-between;
+    width: 100%;
+    .nav-item{
+        .nav-link{
+            @include styleText($color-black-light,$fs-1,$fw-normal);
+            padding: $pd-1 $pd-2;
+        }
+        &:hover{
+            background-color: $color-gray-1;
+        }
+    }
+}
+//responsive
+.header__right{
+    // 1200px
+    @include responsive("extra-large"){
+        .business,.teach{
+            display:none;
+        }
+    }
+    // 768px
+    @include responsive("medium"){
+        .ude-btngroup{
+            display: none;
+        }
+    }
+}
+
+.header__left{
+    @include responsive("medium"){
+        .form-search,.categories{
+            display: none;
+        }
+    }
+}

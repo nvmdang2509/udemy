@@ -1,0 +1,32 @@
+@mixin styleText($color,$fs,$fw){
+    color:$color;
+    font-size:$fs ;
+    font-weight: $fw;
+}
+
+@mixin button($color, $bg-color,$fw,$bg-color-hover,$border-color){
+    color:$color;
+    background-color: $bg-color;
+    font-weight: $fw;
+    border: 1px solid $border-color;
+    &:hover{
+        background-color: $bg-color-hover;
+    }
+}
+
+// $screen chua ten man hinh
+@mixin responsive($screen){
+    // $screen:small 
+    @if(map-has-key($map:$breakpoints ,$key:$screen )){
+        //dung ten man hinh
+        // lay gia tri man hinh theo ten
+        $value: map-get($map:$breakpoints , $key:$screen );
+        @media screen and (max-width:$value){
+            @content;
+        }
+    }
+    @else{
+        @warn "Man hinh nay khong ton tai"
+    }
+}
+

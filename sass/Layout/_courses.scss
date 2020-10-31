@@ -1,0 +1,62 @@
+.courses{
+    .course__content{
+        padding-top: 4rem;
+        .course__intro{
+            h2{
+                @include styleText($fs-0,$color-black-0,$fw-normal);
+            }
+        }
+    }
+
+    .myTab{
+        .nav{
+            justify-content: space-between;
+            border: none;
+        }
+        .nav-item{
+            &:hover{
+                .nav-link{
+                    border:none;
+                }
+            }
+            .nav-link.active{
+                border:none;
+                border-bottom: 5px solid $color-blue;
+            }
+            .nav-link{
+                @include styleText($color-black-0,$fs-0,$fw-normal);
+                border: none;
+            }
+        }
+        .car__title{
+            @include styleText($fs-0,$color-black-0,$fw-bold);
+        }
+        .card-text{
+            @include styleText($color-gray-4,$fw-normal,$fs-1);
+        }
+        .rating{
+            display: flex;
+            .rating__star{
+                @include styleText($color-yellow,$fs-1,$fw-normal);
+                margin-right: $mg-0;
+            }
+            span:nth-child(2){
+                @include styleText($color-gray-4,$fs-1,$fw-bold);
+                margin-right: $mg-0;
+            }
+            span:last-child{
+                @include styleText($color-gray-4,$fs-1,$fw-normal);
+            }
+        }
+        .price{
+            text-align: right;
+            .old__price{
+                @include styleText($color-gray-4,$fs-1,$fw-normal);
+                text-decoration: line-through;
+            }
+            .new__price{
+                @include styleText($color-black-0,$fs-0,$fw-bold);
+            }
+        }
+    }
+}

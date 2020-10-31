@@ -1,0 +1,349 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #29303b;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.owl-prev, .owl-next {
+  position: absolute;
+  top: 33%;
+  left: -4%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50% !important;
+  background-color: #fff !important;
+  box-shadow: 0 2px 8px 2px rgba(20, 23, 28, 0.1);
+  z-index: 3;
+}
+
+.owl-prev span, .owl-next span {
+  color: #007791;
+  font-size: 40px;
+  font-weight: normal;
+  line-height: 30px;
+}
+
+.owl-prev:focus, .owl-next:focus {
+  outline: none;
+}
+
+.owl-next {
+  left: unset;
+  right: -4%;
+}
+
+.btn__white {
+  color: #686f7a;
+  background-color: #fff;
+  font-weight: 600;
+  border: 1px solid #505763;
+  border: 1px solid #505763;
+  padding: 8px 15px;
+}
+
+.btn__white:hover {
+  background-color: rgba(20, 23, 28, 0.05);
+}
+
+.btn__red {
+  color: #fff;
+  background-color: #ec5252;
+  font-weight: 600;
+  border: 1px solid #ec5252;
+  border: 1px solid #505763;
+  padding: 8px 15px;
+}
+
+.btn__red:hover {
+  background-color: #521822;
+}
+
+header {
+  color: #505763;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+}
+
+.header__left .navbar-brand {
+  flex-grow: 1;
+}
+
+.header__left .navbar-brand img {
+  width: 110px;
+}
+
+.header__left .categories {
+  flex-grow: 1;
+}
+
+.header__left .form-search {
+  flex-grow: 10;
+}
+
+.header__left .form-search .form-control {
+  background-color: rgba(20, 23, 28, 0.05);
+  border: none;
+  transition: none;
+}
+
+.header__left .form-search .form-control:focus {
+  box-shadow: none;
+  background-color: #fff;
+  border-top: 1px solid #cacbcc;
+  border-left: 1px solid #cacbcc;
+  border-bottom: 1px solid #cacbcc;
+}
+
+.header__left .form-search .form-control:focus + .input-group-append .input-group-text {
+  color: #ec5252;
+  background-color: #fff;
+  border-top: 1px solid #cacbcc;
+  border-right: 1px solid #cacbcc;
+  border-bottom: 1px solid #cacbcc;
+}
+
+.header__left .form-search .form-control:focus + .input-group-append:hover .input-group-text {
+  color: #fff;
+  background-color: #ec5252;
+}
+
+.header__left .form-search .input-group-append .input-group-text {
+  background-color: rgba(20, 23, 28, 0.05);
+  color: #ec5252;
+  border: none;
+}
+
+.header__left .form-search .input-group-append:hover .input-group-text {
+  color: #fff;
+  background-color: #ec5252;
+}
+
+.header__right .nav-link {
+  color: #505763;
+  font-size: 13px;
+  font-weight: normal;
+  padding: 10px pd-3;
+}
+
+.header__right .nav-item:hover {
+  background-color: rgba(20, 23, 28, 0.05);
+}
+
+.navbar-nav {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #505763;
+  font-size: 13px;
+  font-weight: normal;
+  padding: 10px 20px;
+}
+
+.navbar-nav .nav-item:hover {
+  background-color: rgba(20, 23, 28, 0.05);
+}
+
+@media screen and (max-width: 1200px) {
+  .header__right .business, .header__right .teach {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__right .ude-btngroup {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__left .form-search, .header__left .categories {
+    display: none;
+  }
+}
+
+.udeCarousel {
+  background-image: url(../img/cover.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  position: relative;
+}
+
+.udeCarousel .cover__content {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 30%;
+}
+
+.udeCarousel h1 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.udeCarousel p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.udeCarousel .form .input-group .fmc {
+  padding: 20px;
+  border-radius: 0;
+  border: none;
+}
+
+.udeCarousel .form .input-group::placeholder {
+  color: #a1a7b3;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.udeCarousel .form .input-group:focus {
+  box-shadow: none;
+}
+
+.udeCarousel .form .input-group-append .input-group-text {
+  color: #ec5252;
+  background-color: #fff;
+  border: none;
+  padding: 10px;
+}
+
+.udeCarousel .form .input-group-append:hover .input-group-text {
+  color: #fff;
+  background-color: #ec5252;
+}
+
+.intro {
+  background: linear-gradient(to right, #521822, #ec5252);
+}
+
+.intro .intro__content {
+  padding: 20px;
+}
+
+.intro .intro__content .intro__item .intro__icon {
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  margin-right: 25px;
+}
+
+.intro .intro__content .intro__item .icon__content {
+  padding-top: 10px;
+}
+
+.intro .intro__content .intro__item .icon__content p:first-child {
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.intro .intro__content .intro__item .icon__content p:last-child {
+  color: #fff;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.courses .course__content {
+  padding-top: 4rem;
+}
+
+.courses .course__content .course__intro h2 {
+  color: 15px;
+  font-size: #29303b;
+  font-weight: normal;
+}
+
+.courses .myTab .nav {
+  justify-content: space-between;
+  border: none;
+}
+
+.courses .myTab .nav-item:hover .nav-link {
+  border: none;
+}
+
+.courses .myTab .nav-item .nav-link.active {
+  border: none;
+  border-bottom: 5px solid #007791;
+}
+
+.courses .myTab .nav-item .nav-link {
+  color: #29303b;
+  font-size: 15px;
+  font-weight: normal;
+  border: none;
+}
+
+.courses .myTab .car__title {
+  color: 15px;
+  font-size: #29303b;
+  font-weight: bold;
+}
+
+.courses .myTab .card-text {
+  color: #686f7a;
+  font-size: normal;
+  font-weight: 13px;
+}
+
+.courses .myTab .rating {
+  display: flex;
+}
+
+.courses .myTab .rating .rating__star {
+  color: #F4C150;
+  font-size: 13px;
+  font-weight: normal;
+  margin-right: 2px;
+}
+
+.courses .myTab .rating span:nth-child(2) {
+  color: #686f7a;
+  font-size: 13px;
+  font-weight: bold;
+  margin-right: 2px;
+}
+
+.courses .myTab .rating span:last-child {
+  color: #686f7a;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.courses .myTab .price {
+  text-align: right;
+}
+
+.courses .myTab .price .old__price {
+  color: #686f7a;
+  font-size: 13px;
+  font-weight: normal;
+  text-decoration: line-through;
+}
+
+.courses .myTab .price .new__price {
+  color: #29303b;
+  font-size: 15px;
+  font-weight: bold;
+}
+/*# sourceMappingURL=main.css.map */

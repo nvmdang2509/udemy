@@ -1,0 +1,11 @@
+.btn__white{
+    @include button($color-gray-4,$color-white-0,$fw-bold-0, $color-gray-1,$color-black-light);
+    border: 1px solid $color-black-light;
+    padding : 8px 15px;
+}
+
+.btn__red{
+    @include button($color-white-0,$color-red-0,$fw-bold-0, $color-red-1,$color-red-0);
+    border: 1px solid $color-black-light;
+    padding : 8px 15px;
+}
