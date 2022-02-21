@@ -1,0 +1,40 @@
+.comments {
+    background-color: $color-white-cream;
+    .container{
+        width: 1300px;
+    }
+    .row {
+        margin-bottom: 30px;
+        .cmt__item {
+            .user__content{
+                height: 100%;
+                background-color: #fff;
+                box-shadow: 0 1px 3px 0 rgba(20,23,28,.15);
+                .user__comments {
+                    a {
+                        text-decoration: none;
+                        color: #000;
+                        font-weight: bolder;
+                        font-size: 16px;
+                        margin-bottom: 20px;
+                        
+                        img {
+                            margin-right: 10px;
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+                p{
+                    margin: 20px 0;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 1.5em;
+                    margin-right: 2 0px;
+                }
+            }
+            
+        }
+    }
+}

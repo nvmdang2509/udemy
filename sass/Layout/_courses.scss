@@ -1,9 +1,21 @@
 .courses{
     .course__content{
         padding-top: 4rem;
-        .course__intro{
-            h2{
-                @include styleText($fs-0,$color-black-0,$fw-normal);
+        .course__intro{          
+            background: #f7f8fa;
+            display: flex;
+            flex: 1 0 auto;
+            flex-direction: column;
+            justify-content: center;
+            margin: 15px 15px 28px 0;
+            max-width: calc(216px + 15px);
+            padding: 0 32px;
+            max-width: 30%;
+            .title{
+                @include styleText($color-black-0,$fs-2,$fw-bold-1);
+            }
+            p{
+                @include styleText($color-black-0,$fs-0,$fw-normal);
             }
         }
     }
@@ -56,6 +68,16 @@
             }
             .new__price{
                 @include styleText($color-black-0,$fs-0,$fw-bold);
+            }
+        }
+        @include responsive("extra-large"){
+            .course__last--2{
+                display: none;
+            }
+        }
+        @include responsive("medium"){
+            .course__last--1{
+                display: none;
             }
         }
     }

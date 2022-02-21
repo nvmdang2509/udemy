@@ -1,0 +1,60 @@
+.students{
+    padding: $pd-2;
+    h2{
+        @include styleText($color-black-0, $fs-2, $fw-normal)
+    }
+   .students__items{
+       .owl-item{
+           margin-bottom: 5px;
+       }
+        .card{
+            box-shadow:0 2.5px rgba($color: #000, $alpha: .1);
+            .card-img{
+                position: relative;             
+            }          
+            .card-img-top{
+                border-bottom: 1px solid rgba($color: $color-black-0, $alpha: .1);
+            }
+            .card-title{
+                @include styleText($color-black-0, $fs-0, $fw-bold);
+            }
+            .card-text{
+                @include styleText($color-gray-4, $fs-1, $fw-normal);
+            }
+            .rating{
+                display: flex;
+                .rating__star{
+                    @include styleText($color-yellow, $fs-1, $fw-bold);
+                    margin-right: $mg-1;
+                }
+               span:nth-child(2){
+                   @include styleText($color-gray-4, $fs-1, $fw-bold);
+               }
+               span:last-child{
+                    @include styleText($color-gray-4, $fs-1, $fw-normal);
+               }
+            }
+            .price{
+                text-align: right;
+                .old-price{
+                    @include styleText($color-gray-4, $fs-1, $fw-normal);
+                    text-decoration: line-through;
+                }
+                .new-price{
+                     @include styleText($color-black-0, $fs-0, $fw-bold);
+                }
+            }
+            &:hover{
+                box-shadow: 4px 8px 4px 0 rgba($color: #000, $alpha: .1);
+                .card-img_bg{
+                    position: absolute;
+                    background: rgba($color: #000, $alpha: .5);
+                    top:0;
+                    left:0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }         
+    }     
+}

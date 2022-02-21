@@ -1,0 +1,37 @@
+.services{
+    background: $color-white-cream;
+    padding: 24px 0 ;
+    .slick-list{
+        margin-left: 5%;
+        .services__item{
+            width: 335px !important; 
+            padding-right: 0;
+            text-align: left;
+            .services__ico{
+                img{
+                    margin: 0 auto;
+                }
+            }
+            h4{
+                @include styleText($color-black-0, $fs-2, $fw-bold);
+            }
+            p{
+                @include styleText($color-gray-4, $fs-0, $fw-normal);
+            }
+            .row{
+                background: $color-white-0;
+                margin-right: 16px;
+                padding: 24px;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        @include responsive("large"){
+            .services__item{
+                text-align: center;
+                width: auto;
+            }
+        }
+    }
+}

@@ -19,4 +19,7 @@
             }
         }
     }
+    @include responsive("medium"){
+        display: none;
+    }
 }

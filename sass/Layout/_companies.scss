@@ -1,0 +1,53 @@
+.companies {
+    background-color: #f2f3f5;
+    text-align: center;
+    p {
+        color: #686f7a;
+        font-size: 14px;
+    }
+    span {
+        margin: 40px 0;
+        img {
+            padding: 20px 30px;
+            font-size: 20px;
+        }
+    }
+    .container {
+        .cpa__i {
+            margin: 35px 0;
+            .companies__item {
+                margin-left: 50px;
+                h3 {
+                    font-size: 18px;
+                    font-weight: 900;
+                    line-height: 1.47em;
+                    color: #505763;
+                }
+                p {
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 1.5em;
+                    padding-top: 3px;
+                    color: #29303b;
+                }
+                button{
+                    background-color: #ec5252;
+                    color: #fff;
+                    border: 1px solid transparent;
+                    font-weight: 700;
+                    padding: 10px 10px;
+                    font-size: 16px;
+                    border-radius: 2px;
+                    &:hover{
+                        background-color: rgb(153, 35, 55);
+                        border-color: transparent;
+                    }
+                    &:focus{
+                        outline: none;
+                    }
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.categories{
+    .container{
+        .title{
+            @include styleText($color-black-0, $fs-3, $fw-bold-1);
+        }
+        .row{
+            .cate__i{
+                margin-bottom: 20px;
+                .categories__item{
+                    width: 95%;
+                    background: $color-white-0;
+                    box-shadow: 0 1px 3px 0 rgba(20,23,28,.15);
+                    padding: 20px;
+                    a{
+                        color:$color-black-0; 
+                        font-size: 15px;
+                        text-decoration: none;
+                        i{
+                            margin-right: $mg-1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

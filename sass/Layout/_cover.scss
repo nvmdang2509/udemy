@@ -29,7 +29,6 @@
             }
             &:focus{
                 box-shadow: none;
-              
             }
         }
         .input-group-append{
@@ -46,5 +45,15 @@
                 }
             }
         }
-    }  
+    }
+    @include responsive("medium"){
+        .form{
+            .input-group{
+                width: 300px;
+            }
+        }
+        h1{
+            @include styleText($color-white-0, $fs-3, $fw-normal)
+        }
+    }
 } 
